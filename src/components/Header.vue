@@ -1,14 +1,14 @@
 <template>
-  <header :style="`height: ${width*1.5}px;`">
+  <header>
     <div class="header-bg-grid" :style="`grid-template-columns: repeat(auto-fill, ${width*.5}px); grid-auto-rows: ${width*.5}px;`">
       <div
-        v-for="x in 100"
+        v-for="x in 140"
         :key="x"
         :class="`h${randomNumber(4)} v${randomNumber(4)} c${randomNumber(7)}`"
       ></div>
     </div>
     <div id="logo">
-      <g-link to="/" :style="`font-size: ${width}px;`">DVET.se</g-link>
+      <g-link to="/" :style="`font-size: ${Math.min(72, Math.max(32, width*1.2))}px;`">DVET.se</g-link>
     </div>
   </header>
 </template>
@@ -38,23 +38,25 @@ export default {
 @import '../assets/variables.less';
 
 header {
+  padding: 1.5em 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 20px;
   position: relative;
   overflow: hidden;
   #logo a {
-    font-family: 'Sigmar One';
+    display: inline-block;
+    font-family: 'Press Start 2P', cursive;
     color: white;
     font-weight: 950;
+    padding: .2em;
+    padding-bottom: .08em;
     text-transform: uppercase;
     text-decoration: none;
-    text-shadow: 1px 1px 4px rgba(0,0,0,.1);
+    background: @black;
   }
   .header-bg-grid {
-    opacity: 0.8;
     z-index: -1;
     position: absolute;
     left: 0;
@@ -96,10 +98,9 @@ header {
     div.c7 {
       background: @red;
     }
+    div.c8 {
+      background: @black;
+    }
   }
-}
-
-.nav__link {
-  margin-left: 20px;
 }
 </style>

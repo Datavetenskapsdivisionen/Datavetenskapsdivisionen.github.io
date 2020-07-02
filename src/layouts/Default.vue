@@ -28,12 +28,11 @@ export default {
 <style lang="less">
 @import '../assets/variables.less';
 body {
-  font-family: Sigmar One;
+  font-family: 'Erica One', cursive;
   color: @blue-2;
   margin: 0;
   padding: 0;
-  line-height: 1.5;
-  background: @cyan;
+  background: @black;
 }
 
 #app {

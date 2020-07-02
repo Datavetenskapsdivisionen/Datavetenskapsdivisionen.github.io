@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1>Välkommen till Datavetenskapsdivisionens hemsida!</h1>
+    <h1>Välkommen till DVET.se!</h1>
 
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
