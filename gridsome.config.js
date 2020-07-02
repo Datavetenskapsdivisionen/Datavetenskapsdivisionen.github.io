@@ -5,6 +5,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'Gridsome',
-  plugins: []
+  siteName: 'Datavetenskapsdivisionen',
+  siteUrl: 'https://www.dvet.se',
+  siteDescription: ``, // TODO: Beskrivning av hemsidan (syns på google) för startsidan
+  titleTemplate: '%s | Datavetenskapsdivisionen',
+  pathPrefix: '/'
 }
