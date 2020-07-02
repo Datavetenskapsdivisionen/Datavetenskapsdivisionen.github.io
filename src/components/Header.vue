@@ -1,6 +1,12 @@
 <template>
   <header>
-    <div class="header-bg-grid" :style="`grid-template-columns: repeat(auto-fill, ${width*.5}px); grid-auto-rows: ${width*.5}px;`">
+    <div
+      class="header-bg-grid"
+      :style="
+        `grid-template-columns: repeat(auto-fill, ${width *
+          0.5}px); grid-auto-rows: ${Math.max(width * 0.5, height * 0.5)}px;`
+      "
+    >
       <div
         v-for="x in 140"
         :key="x"
@@ -8,14 +14,16 @@
       ></div>
     </div>
     <div id="logo">
-      <g-link to="/" :style="`font-size: ${Math.min(72, Math.max(32, width*1.2))}px;`">DVET.se</g-link>
+      <g-link to="/" :style="`font-size: ${Math.max(width * 0.8, 32)}px;`"
+        >DVET.se</g-link
+      >
     </div>
   </header>
 </template>
 
 <script>
 export default {
-  props: ['title'],
+  props: ['title', 'subtitle'],
   methods: {
     randomNumber(limit) {
       return Math.floor(Math.random() * limit) + 1
@@ -26,10 +34,10 @@ export default {
   },
   computed: {
     width() {
-      return window.innerWidth * .05
+      return window.innerWidth * 0.05
     },
-    headerHeight() {
-      return window.innerHeight * .3
+    height() {
+      return window.innerHeight * 0.05
     }
   }
 }
@@ -38,23 +46,28 @@ export default {
 @import '../assets/variables.less';
 
 header {
-  padding: 1.5em 0;
+  padding: calc(1vw + 1vh) 0;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  #logo a {
-    display: inline-block;
-    font-family: 'Press Start 2P', cursive;
-    color: white;
-    font-weight: 950;
-    padding: .2em;
-    padding-bottom: .08em;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: @black;
+  #logo {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    a {
+      display: inline-block;
+      font-family: 'Press Start 2P', cursive;
+      color: white;
+      font-weight: 950;
+      padding: .25em .2em .12em .25em;
+      text-transform: uppercase;
+      text-decoration: none;
+      background: @black;
+    }
   }
   .header-bg-grid {
     z-index: -1;
@@ -103,4 +116,5 @@ header {
     }
   }
 }
+
 </style>

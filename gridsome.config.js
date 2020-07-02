@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'Datavetenskapsdivisionen',
+  siteSubtitle: 'Datavetenskapsdivisionen',
   siteUrl: 'https://www.dvet.se',
   siteDescription: ``, // TODO: Beskrivning av hemsidan (syns på google) för startsidan
   titleTemplate: '%s | Datavetenskapsdivisionen',

@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <custom-header :title="$static.metadata.siteName" />
+    <custom-header :title="$static.metadata.siteName" :subtitle="$static.metadata.siteName" />
     <navbar />
-    <slot />
+    <main>
+      <slot />
+    </main>
   </div>
 </template>
 
@@ -27,9 +29,13 @@ export default {
 
 <style lang="less">
 @import '../assets/variables.less';
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Erica One', cursive;
-  color: @blue-2;
+  font-family: 'Exo', sans-serif;
+  color: @white;
   margin: 0;
   padding: 0;
   background: @black;
@@ -37,5 +43,11 @@ body {
 
 #app {
   margin: 0 auto;
+}
+
+main {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: 20px;
 }
 </style>
