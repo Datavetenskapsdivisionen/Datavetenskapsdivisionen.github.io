@@ -1,19 +1,15 @@
 <template>
-  <header>
-    <div class="header-bg-grid">
-      <div v-for="x in 100" :key="x" :class="`h${randomNumber(4)} v${randomNumber(4)} c${randomNumber(8)}`"></div>
+  <header :style="`height: ${width*1.5}px;`">
+    <div class="header-bg-grid" :style="`grid-template-columns: repeat(auto-fill, ${width*.5}px); grid-auto-rows: ${width*.5}px;`">
+      <div
+        v-for="x in 100"
+        :key="x"
+        :class="`h${randomNumber(4)} v${randomNumber(4)} c${randomNumber(7)}`"
+      ></div>
     </div>
-    <strong>
-      <g-link to="/">{{ title }}</g-link>
-    </strong>
-    <nav class="nav">
-      <g-link class="nav__link" to="/">Start</g-link>
-      <g-link class="nav__link" to="/mottagningen-2020/"
-        >Mottagningen 2020</g-link
-      >
-      <g-link class="nav__link" to="/gdpr/">Integritetspolicy</g-link>
-      <g-link class="nav__link" to="/kontakt/">Kontakt</g-link>
-    </nav>
+    <div id="logo">
+      <g-link to="/" :style="`font-size: ${width}px;`">DVET.se</g-link>
+    </div>
   </header>
 </template>
 
@@ -22,7 +18,18 @@ export default {
   props: ['title'],
   methods: {
     randomNumber(limit) {
-      return Math.floor(Math.random() * limit) + 1;
+      return Math.floor(Math.random() * limit) + 1
+    }
+  },
+  mounted() {
+    console.log(window.innerWidth)
+  },
+  computed: {
+    width() {
+      return window.innerWidth * .05
+    },
+    headerHeight() {
+      return window.innerHeight * .3
     }
   }
 }
@@ -34,12 +41,20 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
   margin-bottom: 20px;
-  height: calc(30px * 6);
   position: relative;
   overflow: hidden;
+  #logo a {
+    font-family: 'Sigmar One';
+    color: white;
+    font-weight: 950;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: 1px 1px 4px rgba(0,0,0,.1);
+  }
   .header-bg-grid {
-    opacity: .8;
+    opacity: 0.8;
     z-index: -1;
     position: absolute;
     left: 0;
@@ -47,14 +62,18 @@ header {
     bottom: 0;
     top: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 30px);
-    grid-auto-rows: 30px;
     grid-auto-flow: dense;
     div.v2 {
       grid-row: span 2;
     }
+    div.v3 {
+      grid-row: span 3;
+    }
     div.h2 {
       grid-column: span 2;
+    }
+    div.h3 {
+      grid-column: span 3;
     }
     div.c1 {
       background: @blue-1;
@@ -75,9 +94,6 @@ header {
       background: @skin;
     }
     div.c7 {
-      background: @cyan;
-    }
-    div.c8 {
       background: @red;
     }
   }
