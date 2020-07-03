@@ -10,5 +10,25 @@ module.exports = {
   siteUrl: 'https://www.dvet.se',
   siteDescription: ``, // TODO: Beskrivning av hemsidan (syns på google) för startsidan
   titleTemplate: '%s | Datavetenskapsdivisionen',
-  pathPrefix: '/'
+  pathPrefix: '/',
+  plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'BlogPost',
+        path: './content/blog/**/*.md'
+      }
+    },
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'StaticPage',
+        path: './content/*.md'
+      }
+    }
+  ],
+  templates: {
+    BlogPost: '/blog/:title',
+    StaticPage: '/:title'
+  }
 }

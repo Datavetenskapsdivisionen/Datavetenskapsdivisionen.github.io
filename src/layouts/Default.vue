@@ -50,4 +50,14 @@ main {
   margin: 0 auto;
   padding: 20px;
 }
+
+hr {
+  margin: 30px 0;
+  border-color: rgba(255,255,255,.3);
+}
+
+h2 {
+  margin: 0;
+
+}
 </style>

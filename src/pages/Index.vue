@@ -1,24 +1,38 @@
 <template>
   <Layout>
-    <h1>Välkommen till DVET.se!</h1>
+    <ul class="blog-list">
+      <li v-for="x in $page.allBlogPost.edges" :key="x.id">
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores
-    </p>
-
+    <h2>{{ x.node.title }}</h2>
+    <small>{{ x.node.date }}</small>
+    <div class="post__content" v-html="x.node.content" />
+      </li>
+    </ul>
   </Layout>
 </template>
 
-<script>
-export default {
-  metaInfo: {
-    title: 'Välkommen!'
+<page-query>
+query {
+  allBlogPost: allBlogPost {
+    edges {
+      node {
+        id
+        title
+        path
+        date (format: "DD/MM-YYYY")
+        content
+      }
+    }
   }
 }
-</script>
+</page-query>
 
-<style>
+<style lang="less">
 .home-links a {
   margin-right: 1rem;
+}
+ul.blog-list {
+  list-style-type: none;
+  padding: 0 10px;
 }
 </style>

@@ -5,7 +5,7 @@
       <g-link class="nav__link" to="/mottagningen-2020/"
         >Mottagningen 2020</g-link
       >
-      <g-link class="nav__link" to="/gdpr/">Integritetspolicy</g-link>
+      <g-link class="nav__link" to="/integritetspolicy/">Integritetspolicy</g-link>
       <g-link class="nav__link" to="/kontakt/">Kontakt</g-link>
     </div>
   </nav>
