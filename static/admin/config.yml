@@ -19,20 +19,10 @@ collections:
 
   - label: "Pages"
     name: "pages"
-    files:
-      - label: "Kontakt"
-        name: "kontakt"
-        file: "content/kontakt.md"
-        fields:
-          - {label: Innehåll, name: content, widget: markdown}
-      - label: "Integritetspolicy"
-        name: "integritetspolicy"
-        file: "content/integritetspolicy.md"
-        fields:
-          - {label: Innehåll, name: content, widget: markdown}
-      - label: "Mottagningen 2020"
-        name: "mottagningen-2020"
-        file: "content/integritetspolicy.md"
-        fields:
-          - {label: Innehåll, name: content, widget: markdown}
+    folder: 'content/'
+    create: true
+    fields: # The fields for each document, usually in front matter
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Last updated', name: 'date', widget: 'datetime' }
+      - { label: 'Body', name: 'content', widget: 'markdown' }
 
