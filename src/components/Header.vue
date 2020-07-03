@@ -2,10 +2,6 @@
   <header>
     <div
       class="header-bg-grid"
-      :style="
-        `grid-template-columns: repeat(auto-fill, ${width *
-          0.5}px); grid-auto-rows: ${Math.max(width * 0.5, height * 0.5)}px;`
-      "
     >
       <div
         v-for="x in 140"
@@ -14,9 +10,7 @@
       ></div>
     </div>
     <div id="logo">
-      <g-link to="/" :style="`font-size: ${Math.max(width * 0.8, 32)}px;`"
-        >DVET.se</g-link
-      >
+      <g-link to="/">DVET.se</g-link>
     </div>
   </header>
 </template>
@@ -28,14 +22,6 @@ export default {
     randomNumber(limit) {
       return Math.floor(Math.random() * limit) + 1
     }
-  },
-  computed: {
-    width() {
-      return window.innerWidth * 0.05
-    },
-    height() {
-      return window.innerHeight * 0.05
-    }
   }
 }
 </script>
@@ -43,7 +29,7 @@ export default {
 @import '../assets/variables.less';
 
 header {
-  padding: calc(1vw + 1vh) 0;
+  padding: 1vw 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -58,9 +44,10 @@ header {
     a {
       display: inline-block;
       font-family: 'Press Start 2P', cursive;
+      font-size: calc(2vw + 3vh);
       color: white;
       font-weight: 950;
-      padding: .25em .2em .12em .25em;
+      padding: 0.25em 0.2em 0.12em 0.25em;
       text-transform: uppercase;
       text-decoration: none;
       background: @black;
@@ -74,6 +61,8 @@ header {
     bottom: 0;
     top: 0;
     display: grid;
+    grid-template-columns: repeat(auto-fill, 2vw);
+    grid-auto-rows: 2vw;
     grid-auto-flow: dense;
     div.v2 {
       grid-row: span 2;
@@ -113,5 +102,4 @@ header {
     }
   }
 }
-
 </style>
