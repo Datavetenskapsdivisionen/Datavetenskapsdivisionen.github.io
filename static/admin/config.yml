@@ -12,17 +12,18 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '{{slug}}' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Featured Image', name: 'thumbnail', widget: 'image' }
-      - { label: 'Body', name: 'content', widget: 'markdown' }
+      - { label: 'Titel', name: 'title', widget: 'string' }
+      - { label: 'Skapades datum', name: 'date', widget: 'datetime' }
+      - { label: 'Thumbnail', name: 'thumbnail', widget: 'image' }
+      - { label: 'Text', name: 'content', widget: 'markdown' }
 
   - label: "Pages"
     name: "pages"
     folder: 'content/'
     create: true
     fields: # The fields for each document, usually in front matter
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Last updated', name: 'date', widget: 'datetime' }
-      - { label: 'Body', name: 'content', widget: 'markdown' }
+      - { label: 'Titel', name: 'title', widget: 'string' }
+      - { label: 'Senast uppdaterad', name: 'date', widget: 'datetime' }
+      - { label: 'Order (i meny)', name: 'order', widget: 'number' }
+      - { label: 'Text', name: 'content', widget: 'markdown' }
 
