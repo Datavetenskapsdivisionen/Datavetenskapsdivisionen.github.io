@@ -29,9 +29,6 @@ export default {
       return Math.floor(Math.random() * limit) + 1
     }
   },
-  mounted() {
-    console.log(window.innerWidth)
-  },
   computed: {
     width() {
       return window.innerWidth * 0.05
