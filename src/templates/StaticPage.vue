@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <h2>{{ $page.staticPage.title }}</h2>
-    <div class="post__content" v-html="$page.staticPage.body" />
+    <div class="post__content" v-html="$page.staticPage.content" />
   </Layout>
 </template>
 
@@ -11,7 +11,7 @@ query Page ($id: ID!) {
     title
     path
     date (format: "DD/MM-YYYY")
-    body
+    content
   }
 }
 </page-query>
