@@ -5,7 +5,7 @@
 
     <h2>{{ x.node.title }}</h2>
     <small>{{ x.node.date }}</small>
-    <div class="post__content" v-html="x.node.content" />
+    <div class="post__content" v-html="x.node.body" />
       </li>
     </ul>
   </Layout>
@@ -20,7 +20,7 @@ query {
         title
         path
         date (format: "DD/MM-YYYY")
-        content
+        body
       }
     }
   }
