@@ -11,7 +11,7 @@
 
 <static-query>
 query {
-  allStaticPage {
+  allStaticPage(sortBy: "order", order: ASC) {
 	edges {
     node {
       id
