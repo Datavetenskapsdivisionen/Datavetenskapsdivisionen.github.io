@@ -59,6 +59,12 @@ nav {
   .nav__link:hover:nth-child(4) {
     border-color: @skin;
   }
+  .nav__link:hover:nth-child(5) {
+    border-color: @cyan;
+  }
+  .nav__link:hover:nth-child(6) {
+    border-color: @white;
+  }
 }
 
 .nav__link {
@@ -82,6 +88,12 @@ nav {
 }
 .nav__link.active--exact:nth-child(4) {
   border-color: @skin;
+}
+.nav__link.active--exact:nth-child(5) {
+  border-color: @cyan;
+}
+.nav__link.active--exact:nth-child(6) {
+  border-color: @white;
 }
 
 .nav__link:hover {
