@@ -2,21 +2,37 @@
   <nav>
     <div>
       <g-link class="nav__link" to="/">Start</g-link>
-      <g-link class="nav__link" to="/mottagningen-2020/"
-        >Mottagningen 2020</g-link
+      <g-link class="nav__link" :to="x.node.path" v-for="x in $static.allStaticPage.edges" :key="x.node.id">
+        {{ x.node.title }}</g-link
       >
-      <g-link class="nav__link" to="/integritetspolicy/">Integritetspolicy</g-link>
-      <g-link class="nav__link" to="/kontakt/">Kontakt</g-link>
     </div>
   </nav>
 </template>
+
+<static-query>
+query {
+  allStaticPage {
+	edges {
+    node {
+      id
+      title
+      path
+    }
+  }
+}
+}
+</static-query>
 
 <style lang="less">
 @import '../assets/variables.less';
 nav {
   display: flex;
   align-items: center;
-  background-image: linear-gradient(to top left,  rgba(141, 37, 37, 0.01),rgba(255,255,255,.1));
+  background-image: linear-gradient(
+    to top left,
+    rgba(141, 37, 37, 0.01),
+    rgba(255, 255, 255, 0.1)
+  );
   overflow-x: scroll;
   div {
     display: flex;
@@ -31,18 +47,18 @@ nav {
     justify-content: center;
     overflow-x: hidden;
   }
-.nav__link:hover:nth-child(1) {
-  border-color: @red;
-}
-.nav__link:hover:nth-child(2) {
-  border-color: @yellow;
-}
-.nav__link:hover:nth-child(3) {
-  border-color: @blue-2;
-}
-.nav__link:hover:nth-child(4) {
-  border-color: @skin;
-}
+  .nav__link:hover:nth-child(1) {
+    border-color: @red;
+  }
+  .nav__link:hover:nth-child(2) {
+    border-color: @yellow;
+  }
+  .nav__link:hover:nth-child(3) {
+    border-color: @blue-2;
+  }
+  .nav__link:hover:nth-child(4) {
+    border-color: @skin;
+  }
 }
 
 .nav__link {
@@ -69,6 +85,6 @@ nav {
 }
 
 .nav__link:hover {
-  background: rgba(255,255,255,.05);
+  background: rgba(255, 255, 255, 0.05);
 }
 </style>
