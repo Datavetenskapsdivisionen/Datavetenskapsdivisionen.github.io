@@ -1,7 +1,6 @@
 <template>
   <nav>
     <div>
-      <g-link class="nav__link" to="/">Start</g-link>
       <g-link class="nav__link" :to="x.node.path" v-for="x in $static.allStaticPage.edges" :key="x.node.id">
         {{ x.node.title }}</g-link
       >
