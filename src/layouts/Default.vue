@@ -57,8 +57,6 @@ main {
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    overflow-x: scroll;
-    overflow-wrap: break-word;
     table {
       width: 100%;
       border-collapse: collapse;
@@ -72,6 +70,13 @@ main {
         background-color: rgba(255, 255, 255, 0.4);
       }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  main .content {
+    overflow-x: scroll;
+    overflow-wrap: break-word;
   }
 }
 
