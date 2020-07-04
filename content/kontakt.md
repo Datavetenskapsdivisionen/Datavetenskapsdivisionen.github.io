@@ -12,13 +12,15 @@ content: >-
   ## Kontakt
 
 
-  [Styrelsen](mailto:styrelsen@dvet.se)
+  | Grupp eller person | Beskrivning | E-post |
 
+  | --- | --- | --- |
 
-  [Ordförande och vice-ordförande](mailto:ordforande@dvet.se)
+  | Styrelsen | Divisionsstyrelsen är divisionens högsta verkställande organ och är ytterst ansvariga för divisionen. | [styrelsen@dvet.se](mailto:styrelsen@dvet.se) |
 
+  | Divisionsordförande och vice-ordförande | Ordförande och vice-ordförande för divisionsstyrelsen. Om du endast vill kontakta dessa två personer kan du mejla denna kontaktväg. | [ordforande@dvet.se](mailto:ordforande@dvet.se) |
 
-  [SAMO](mailto:samo@dvet.se)
+  | SAMO | Divisionens SAMO (Studentarbetsmiljöombud) sitter i divisionsstyrelsen och ansvarar för studenternas åsikter om den fysiska och psykiska studiemiljön framförs till universitetet. | [samo@dvet.se](mailto:samo@dvet.se)
 
 
   Om du inte vilken av ovanstående grupperingar du vill kontakta så skriv ett mejl till [info@dvet.se](mailto:info@dvet.se).
