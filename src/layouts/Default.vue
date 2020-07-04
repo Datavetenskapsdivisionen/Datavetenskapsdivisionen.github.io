@@ -37,7 +37,7 @@ export default {
 }
 
 body {
-  font-family: monospace;
+  font-family: 'Roboto';
   color: @black;
   margin: 0;
   padding: 0;

@@ -9,7 +9,7 @@ export default function(Vue, { router, head, isClient }) {
   head.link.push({
     rel: 'stylesheet',
     href:
-      'https://fonts.googleapis.com/css2?family=Exo:wght@900&family=Press+Start+2P&family=Roboto+Slab&display=swap'
+      'https://fonts.googleapis.com/css2?family=Exo:wght@900&family=Press+Start+2P&family=Roboto&display=swap'
   })
 
   Vue.component('Layout', DefaultLayout)
