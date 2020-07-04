@@ -28,9 +28,6 @@ query {
 </page-query>
 
 <style lang="less">
-.home-links a {
-  margin-right: 1rem;
-}
 ul.blog-list {
   list-style-type: none;
   padding: 0 10px;
