@@ -57,6 +57,21 @@ main {
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
+    overflow-x: scroll;
+    overflow-wrap: break-word;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      td,
+      th {
+        border: 1px solid @white;
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.4);
+      }
+    }
   }
 }
 
