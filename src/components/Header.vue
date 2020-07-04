@@ -1,8 +1,6 @@
 <template>
   <header>
-    <div
-      class="header-bg-grid"
-    >
+    <div class="header-bg-grid" :key="this.$route.path">
       <div
         v-for="x in 140"
         :key="x"
@@ -10,7 +8,8 @@
       ></div>
     </div>
     <div id="logo">
-      <g-link to="/">DVET.se</g-link>
+      <g-link to="/">Datavetenskap</g-link>
+      <span id="subheader">vid Göteborgs Universitet</span>
     </div>
   </header>
 </template>
@@ -44,7 +43,7 @@ header {
     a {
       display: inline-block;
       font-family: 'Press Start 2P', cursive;
-      font-size: calc(2vw + 3vh);
+      font-size: clamp(10px, calc(3vw + 1vh), 56px);
       color: white;
       font-weight: 950;
       padding: 0.25em 0.2em 0.12em 0.25em;
@@ -52,6 +51,14 @@ header {
       text-decoration: none;
       background: @black;
     }
+  }
+  #subheader {
+    background: @black;
+    color: @white;
+    padding: 3px 5px;
+    font-size: clamp(8px, calc(1vw + .3vh), 16px);
+      font-family: 'Press Start 2P', cursive;
+    text-transform: uppercase;
   }
   .header-bg-grid {
     z-index: -1;

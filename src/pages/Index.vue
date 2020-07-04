@@ -1,35 +1,17 @@
 <template>
   <Layout>
-    <ul class="blog-list">
-      <li v-for="x in $page.allBlogPost.edges" :key="x.id">
-
-    <h2>{{ x.node.title }}</h2>
-    <small>{{ x.node.date }}</small>
-    <div class="post__content" v-html="x.node.content" />
-      </li>
-    </ul>
+    <div class="content" v-html="$page.allStaticPage.edges[0].node.content" />
   </Layout>
 </template>
 
 <page-query>
 query {
-  allBlogPost: allBlogPost {
+  allStaticPage(filter: {order: {eq: 0}}) {
     edges {
       node {
-        id
-        title
-        path
-        date (format: "DD/MM-YYYY")
         content
       }
     }
   }
 }
 </page-query>
-
-<style lang="less">
-ul.blog-list {
-  list-style-type: none;
-  padding: 0 10px;
-}
-</style>

@@ -1,7 +1,15 @@
 <template>
   <nav>
     <div>
-      <g-link class="nav__link" :to="x.node.path" v-for="x in $static.allStaticPage.edges" :key="x.node.id">
+      <g-link class="nav__link" to="/">
+        {{ $static.allStaticPage.edges[0].node.title }}</g-link
+      >
+      <g-link
+        class="nav__link"
+        :to="x.node.path"
+        v-for="x in $static.allStaticPage.edges.slice(1)"
+        :key="x.node.id"
+      >
         {{ x.node.title }}</g-link
       >
     </div>
@@ -25,19 +33,18 @@ query {
 <style lang="less">
 @import '../assets/variables.less';
 nav {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 9px;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(
-    to top left,
-    rgba(141, 37, 37, 0.01),
-    rgba(255, 255, 255, 0.1)
-  );
+  background: @black;
   overflow-x: scroll;
+  padding-bottom: 10px;
   div {
     display: flex;
     justify-content: space-between;
     width: @width;
-    padding: 0 20px;
+    padding: 10px 10px 0;
   }
 }
 
