@@ -45,10 +45,14 @@ body {
 }
 
 #app {
+  display: flex;
+  flex-direction: column;
   margin: 0 auto;
+  height: 100vh;
 }
 
 main {
+  flex: 1;
   max-width: 768px;
   margin: 10px auto;
   .content {
