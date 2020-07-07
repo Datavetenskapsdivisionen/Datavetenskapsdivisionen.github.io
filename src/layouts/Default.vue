@@ -41,7 +41,7 @@ body {
   color: @black;
   margin: 0;
   padding: 0;
-  background: @black;
+  background: 'white';
 }
 
 #app {
@@ -52,11 +52,9 @@ main {
   max-width: 768px;
   margin: 10px auto;
   .content {
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-    background: rgba(255, 255, 255, 1);
     border-radius: 10px;
-    padding: 20px;
     margin: 10px;
+    padding: 10px 20px;
     table {
       width: 100%;
       border-collapse: collapse;
@@ -77,6 +75,7 @@ main {
   main .content {
     overflow-x: scroll;
     overflow-wrap: break-word;
+    padding: 0;
   }
 }
 

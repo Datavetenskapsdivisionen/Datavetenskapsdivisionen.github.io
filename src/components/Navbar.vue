@@ -39,12 +39,12 @@ nav {
   align-items: center;
   background: @black;
   overflow-x: scroll;
-  padding-bottom: 10px;
+  padding-bottom: 5px;
   div {
     display: flex;
     justify-content: space-between;
     width: @width;
-    padding: 10px 10px 0;
+    padding: 5px 10px 0;
   }
 }
 

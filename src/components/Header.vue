@@ -26,11 +26,14 @@ export default {
 </script>
 <style lang="less">
 @import '../assets/variables.less';
-
-header {
-  padding: 1vw 0;
-  display: flex;
+@media (min-width: 768px) {
+  header {
   align-items: center;
+  }
+}
+header {
+  padding: 1vw;
+  display: flex;
   flex-direction: column;
   position: relative;
   overflow: hidden;
