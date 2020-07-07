@@ -52,9 +52,11 @@ body {
 }
 
 main {
-  flex: 1;
+  width: 100%;
+  overflow-x: scroll;
   max-width: 768px;
   margin: 10px auto;
+  flex: 1;
   .content {
     border-radius: 10px;
     margin: 10px;
@@ -77,7 +79,6 @@ main {
 
 @media (max-width: 768px) {
   main .content {
-    overflow-x: scroll;
     overflow-wrap: break-word;
     padding: 0;
   }
