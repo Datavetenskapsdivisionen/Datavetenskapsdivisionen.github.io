@@ -32,6 +32,7 @@ header {
   justify-content: center;
   position: relative;
   padding: 10px;
+  overflow: hidden;
   #logo {
     padding: 0 10px;
     display: flex;

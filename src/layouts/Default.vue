@@ -59,7 +59,6 @@ main {
   .content {
     border-radius: 10px;
     margin: 10px;
-    padding: 10px 20px;
     table {
       width: 100%;
       border-collapse: collapse;

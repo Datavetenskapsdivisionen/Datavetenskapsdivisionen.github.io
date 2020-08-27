@@ -23,8 +23,8 @@ export default {
  */
 .hamburger {
   position: absolute;
-  top: 5px;
-  right: 10px;
+  top: 2px;
+  right: 5px;
   align-self: flex-end;
   padding: 15px 15px;
   display: inline-block;
