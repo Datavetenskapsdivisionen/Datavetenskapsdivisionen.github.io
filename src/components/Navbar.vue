@@ -1,10 +1,33 @@
 <template>
-  <nav  :style="{'justify-content': isMobile && !showHamburgerMenu ? 'flex-start' : 'center'}">
-    <hamburger-menu v-if="isMobile" v-on:click="toggleMenu" :isActive="showHamburgerMenu" />
-      <a href="#" class="nav__link" v-if="isMobile && !showHamburgerMenu">
-        {{ $route.path === '/' ? 'Start' : $static.allStaticPage.edges.find(x => x.node.path === this.$route.path).node.title }}</a
+  <nav>
+    <hamburger-menu
+      class="mobile"
+      v-on:click="toggleMenu"
+      :isActive="showHamburgerMenu"
+    />
+    <a href="#" class="nav__link mobile" v-if="!showHamburgerMenu">
+      {{
+        $route.path === '/'
+          ? 'Start'
+          : $static.allStaticPage.edges.find(
+              x => x.node.path === this.$route.path
+            ).node.title
+      }}</a
+    >
+    <div v-if="showHamburgerMenu" class="mobile">
+      <g-link class="nav__link" to="/">
+        {{ $static.allStaticPage.edges[0].node.title }}</g-link
       >
-    <div v-if="!isMobile || showHamburgerMenu">
+      <g-link
+        class="nav__link"
+        :to="x.node.path"
+        v-for="x in $static.allStaticPage.edges.slice(1)"
+        :key="x.node.id"
+      >
+        {{ x.node.title }}</g-link
+      >
+    </div>
+    <div class="desktop">
       <g-link class="nav__link" to="/">
         {{ $static.allStaticPage.edges[0].node.title }}</g-link
       >
@@ -25,38 +48,10 @@ import HamburgerMenu from './HamburgerMenu'
 export default {
   data() {
     return {
-      showHamburgerMenu: false,
-      windowWidth: window.innerWidth
-    }
+      showHamburgerMenu: false    }
   },
   components: {
     HamburgerMenu
-  },
-  watch: {
-    windowWidth(newWidth, oldWidth) {
-      if (newWidth < 768 && this.showHamburgerMenu)
-        this.showHamburgerMenu = true
-      else this.showHamburgerMenu = false
-    }
-  },
-  mounted() {
-    console.log(this.$route)
-    console.log(this.$static.allStaticPage.edges)
-    window.addEventListener(
-      'resize',
-      () => (this.windowWidth = window.innerWidth)
-    )
-  },
-  computed: {
-    isMobile() {
-      return this.windowWidth < 768
-    }
-  },
-  beforeDestroy() {
-    window.removeEventListener(
-      'resize',
-      () => (this.windowWidth = window.innerWidth)
-    )
   },
   methods: {
     toggleMenu() {
@@ -100,6 +95,8 @@ nav {
 
 @media (max-width: 767px) {
   nav {
+  justify-content: flex-start;
+
     div {
       flex-direction: column;
     }

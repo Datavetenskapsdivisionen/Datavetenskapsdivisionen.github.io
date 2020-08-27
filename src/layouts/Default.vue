@@ -75,12 +75,21 @@ main {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   main {
     .content {
       overflow-wrap: break-word;
       padding: 0;
     }
+  }
+  .desktop {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .mobile {
+    display: none;
   }
 }
 
