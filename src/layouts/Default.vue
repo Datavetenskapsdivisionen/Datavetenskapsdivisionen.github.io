@@ -42,6 +42,7 @@ body {
   margin: 0;
   padding: 0;
   background: 'white';
+  overflow-y: scroll;
 }
 
 #app {
