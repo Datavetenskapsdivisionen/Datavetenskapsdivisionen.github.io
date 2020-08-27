@@ -1,6 +1,6 @@
 <template>
   <nav  :style="{'justify-content': isMobile && !showHamburgerMenu ? 'flex-start' : 'center'}">
-    <hamburger-menu v-if="isMobile" v-on:click="toggleMenu" />
+    <hamburger-menu v-if="isMobile" v-on:click="toggleMenu" :isActive="showHamburgerMenu" />
       <a href="#" class="nav__link" v-if="isMobile && !showHamburgerMenu">
         {{ $route.path === '/' ? 'Start' : $static.allStaticPage.edges.find(x => x.node.path === this.$route.path).node.title }}</a
       >
