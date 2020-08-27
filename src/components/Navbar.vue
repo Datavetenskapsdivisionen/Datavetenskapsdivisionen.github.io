@@ -1,6 +1,10 @@
 <template>
-  <nav>
-    <div>
+  <nav  :style="{'justify-content': isMobile && !showHamburgerMenu ? 'flex-start' : 'center'}">
+    <hamburger-menu v-if="isMobile" v-on:click="toggleMenu" />
+      <a href="#" class="nav__link" v-if="isMobile && !showHamburgerMenu">
+        {{ $route.path === '/' ? 'Start' : $static.allStaticPage.edges.find(x => x.node.path === this.$route.path).node.title }}</a
+      >
+    <div v-if="!isMobile || showHamburgerMenu">
       <g-link class="nav__link" to="/">
         {{ $static.allStaticPage.edges[0].node.title }}</g-link
       >
@@ -15,6 +19,52 @@
     </div>
   </nav>
 </template>
+
+<script>
+import HamburgerMenu from './HamburgerMenu'
+export default {
+  data() {
+    return {
+      showHamburgerMenu: false,
+      windowWidth: window.innerWidth
+    }
+  },
+  components: {
+    HamburgerMenu
+  },
+  watch: {
+    windowWidth(newWidth, oldWidth) {
+      if (newWidth < 768 && this.showHamburgerMenu)
+        this.showHamburgerMenu = true
+      else this.showHamburgerMenu = false
+    }
+  },
+  mounted() {
+    console.log(this.$route)
+    console.log(this.$static.allStaticPage.edges)
+    window.addEventListener(
+      'resize',
+      () => (this.windowWidth = window.innerWidth)
+    )
+  },
+  computed: {
+    isMobile() {
+      return this.windowWidth < 768
+    }
+  },
+  beforeDestroy() {
+    window.removeEventListener(
+      'resize',
+      () => (this.windowWidth = window.innerWidth)
+    )
+  },
+  methods: {
+    toggleMenu() {
+      this.showHamburgerMenu = !this.showHamburgerMenu
+    }
+  }
+}
+</script>
 
 <static-query>
 query {
@@ -35,24 +85,28 @@ query {
 nav {
   font-family: 'Press Start 2P', cursive;
   font-size: 9px;
-  display: flex;
-  align-items: center;
   background: @black;
-  overflow-x: scroll;
   padding-bottom: 5px;
+  min-height: 60px;
+  padding: 5px 10px 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
   div {
     display: flex;
-    justify-content: space-between;
     width: @width;
-    padding: 5px 10px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  nav {
+    div {
+      flex-direction: column;
+    }
   }
 }
 
 @media (min-width: 768px) {
-  nav {
-    justify-content: center;
-    overflow-x: hidden;
-  }
   .nav__link:hover:nth-child(1) {
     border-color: @red;
   }

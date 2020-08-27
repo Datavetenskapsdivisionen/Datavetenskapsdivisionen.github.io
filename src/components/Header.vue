@@ -2,7 +2,7 @@
   <header>
     <div class="header-bg-grid" :key="this.$route.path">
       <div
-        v-for="x in 140"
+        v-for="x in 200"
         :key="x"
         :class="`h${randomNumber(4)} v${randomNumber(4)} c${randomNumber(7)}`"
       ></div>
@@ -26,19 +26,14 @@ export default {
 </script>
 <style lang="less">
 @import '../assets/variables.less';
-@media (min-width: 768px) {
-  header {
-  align-items: center;
-  }
-}
 header {
-  padding: 1vw;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   position: relative;
-  overflow: hidden;
+  padding: 10px;
   #logo {
-    max-width: 100%;
+    padding: 0 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -46,7 +41,7 @@ header {
     a {
       display: inline-block;
       font-family: 'Press Start 2P', cursive;
-      font-size: clamp(10px, calc(3vw + 1vh), 56px);
+      font-size: 1.4rem;
       color: white;
       font-weight: 950;
       padding: 0.25em 0.2em 0.12em 0.25em;
@@ -59,8 +54,8 @@ header {
     background: @black;
     color: @white;
     padding: 3px 5px;
-    font-size: clamp(8px, calc(1vw + .3vh), 16px);
-      font-family: 'Press Start 2P', cursive;
+    font-size: .8rem;
+    font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
   }
   .header-bg-grid {
@@ -70,9 +65,11 @@ header {
     right: 0;
     bottom: 0;
     top: 0;
+    max-height: 12rem;
+    overflow: hidden;
     display: grid;
-    grid-template-columns: repeat(auto-fill, 2vw);
-    grid-auto-rows: 2vw;
+    grid-template-columns: repeat(auto-fill, 20px);
+    grid-auto-rows: 20px;
     grid-auto-flow: dense;
     div.v2 {
       grid-row: span 2;
@@ -109,6 +106,18 @@ header {
     }
     div.c8 {
       background: @black;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    align-items: center;
+    #logo {
+      width: @width;
+      a {
+        font-size: 2rem;
+      }
     }
   }
 }
