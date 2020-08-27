@@ -107,6 +107,9 @@ nav {
 }
 
 @media (min-width: 768px) {
+  .nav__link {
+    margin-left: 10px;
+  }
   .nav__link:hover:nth-child(1) {
     border-color: @red;
   }
