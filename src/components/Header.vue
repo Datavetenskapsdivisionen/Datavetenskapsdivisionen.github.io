@@ -31,7 +31,6 @@ header {
   flex-direction: column;
   justify-content: center;
   position: relative;
-  padding: 10px;
   overflow: hidden;
   min-height: 80px;
   #logo {
