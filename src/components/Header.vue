@@ -33,6 +33,7 @@ header {
   position: relative;
   padding: 10px;
   overflow: hidden;
+  min-height: 80px;
   #logo {
     padding: 0 10px;
     display: flex;
@@ -55,7 +56,7 @@ header {
     background: @black;
     color: @white;
     padding: 3px 5px;
-    font-size: .8rem;
+    font-size: 0.8rem;
     font-family: 'Press Start 2P', cursive;
     text-transform: uppercase;
   }

@@ -77,7 +77,6 @@ main {
 
 @media (max-width: 768px) {
   main {
-  overflow-x: scroll;
     .content {
       overflow-wrap: break-word;
       padding: 0;
