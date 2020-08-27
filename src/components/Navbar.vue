@@ -14,7 +14,7 @@
             ).node.title
       }}</a
     >
-    <div v-if="showHamburgerMenu" class="mobile">
+    <div v-if="showHamburgerMenu" class="mobile" @click="showHamburgerMenu = false">
       <g-link class="nav__link" to="/">
         {{ $static.allStaticPage.edges[0].node.title }}</g-link
       >
