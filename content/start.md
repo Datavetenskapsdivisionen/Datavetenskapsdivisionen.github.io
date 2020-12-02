@@ -12,7 +12,13 @@ content: >-
   ## Prenumerera på utskick
 
 
-  Skicka ett mejl till adressen [_utskick-subscribe@dvet.se_](mailto:utskick-subscribe@dvet.se). Det spelar ingen roll om ämnesraden eller mejlbodyn innehåller text eller inte. Kort efter du har skickat mejlet ska du få ett bekräftelsemejl som säger att du nu prenumererar på mejlutskick. 
+  Skicka ett mejl till adressen *[utskick-subscribe@dvet.se](mailto:utskick-subscribe@dvet.se)*. Det spelar ingen roll om ämnesraden eller mejlbodyn innehåller text eller inte. Kort efter du har skickat mejlet ska du få ett bekräftelsemejl som säger att du nu prenumererar på mejlutskick.
+
+
+  ## Divisionsstämma
+
+
+  Den 16 december klockan 18:00 kommer divisionsstämman sammanträda på Zoom. Möteshandlingar och mer detaljerad information kommer komma senare.
 
 
   ## Kontakt
