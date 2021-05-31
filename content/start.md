@@ -9,6 +9,15 @@ content: >-
   Här kan du kontakta Datavetenskapsdivisionen; läsa information om mottagningen hösten 2020; och se alla divisionens dokument.
 
 
+  ## Terminsmöte den 14 juni
+
+
+  På måndagen den 14 juni kommer divisionsstämman hålla möte via Zoom.
+
+
+  Zoomlänk kommer att finns tillgängliga på de mer stängda kanaler som inte är direkt åtkomliga via WWW.
+
+
   ## Prenumerera på utskick
 
 
