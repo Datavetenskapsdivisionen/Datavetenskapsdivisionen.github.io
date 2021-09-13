@@ -24,7 +24,7 @@ content: >-
   För att få delta under mötet behöver man vara medlem i Datavetenskapsdivisionen. För att bli medlem behöver man fylla i [Medlemsformuläret](https://cloud.dvet.se/nextcloud/index.php/apps/forms/YpsLyQsr5naRCXgp).
 
 
-  Vi kommer lägga upp alla mötesdokument senast måndagen den 13 september. Vi kommer länka till dessa här när de är uppladdade.
+  [Möteshandlingarna finns nu tillgängliga](https://cloud.dvet.se/nextcloud/index.php/s/jC532QeNmxQ4cGk)
 
 
   Om ni har några frågor så får ni självklart ställa frågor till oss!
