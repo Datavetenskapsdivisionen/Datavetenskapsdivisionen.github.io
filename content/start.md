@@ -9,27 +9,6 @@ content: >-
   Här kan du kontakta Datavetenskapsdivisionen; läsa information om mottagningen hösten 2020; och se alla divisionens dokument.
 
 
-  ## Extrastämma den 15 september
-
-
-  På onsdagen den 15 september klockan 18:00 kommer föreningen hålla en extrastämma i Monaden. Om vi blir flera än vad vi får plats kommer vi flytta till en större lokal på campus. Det kommer då finnas en lapp i Monaden som informerar om detta. Vi kommer bjuda på mat under mötet!
-
-
-  På stämman beslutar divisionens medlemmar om att olika saker som tas upp för behandling. Detta möte kommer vi hålla fyllnadsval till styrelsen, samt några propositioner om ändringar av styrdokument. Eventuellt kommer vi även behandla motioner som ni medlemmar har skickat in. För att skicka in en motion behöver den vara styrelsen fått den senast på onsdagen den 8 september. Dessa skickas enklast till styrelsen@dvet.se.
-
-
-  Nuvarande styrelsen, Albin och Morgan, kommer lägga fram ett förslag på personer som vi tror hade passat in på styrelsen, men varje medlem har självklart rätt att nominera sig själva under mötet om de önskar så. Det vi för tillfället söker är vice ordförande, SAMO (studiearbetsmiljöombud), samt en sekreterare.
-
-
-  För att få delta under mötet behöver man vara medlem i Datavetenskapsdivisionen. För att bli medlem behöver man fylla i [Medlemsformuläret](https://cloud.dvet.se/nextcloud/index.php/apps/forms/YpsLyQsr5naRCXgp).
-
-
-  [Möteshandlingarna finns nu tillgängliga](https://cloud.dvet.se/nextcloud/index.php/s/jC532QeNmxQ4cGk)
-
-
-  Om ni har några frågor så får ni självklart ställa frågor till oss!
-
-
   ## Prenumerera på utskick
 
 
